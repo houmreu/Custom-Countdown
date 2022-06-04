@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*
+{
+ box-sizing: border-box;
+}
+
+body
+{
+    color: white;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+h1
+{
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+}
+
+.countdown
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-text
+{
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+}
+
+.countdown-el
+{
+    text-align: center;
+}
+
+.countdown-el span
+{
+    font-size: 1.5rem;
+}
+
+.custom-field
+{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom-field input
+{
+    border: none;
+    appearance: none;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+}
+
+.custom-field .placeholder
+{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder
+{
+    top: 10px;
+    font-size: 10px;
+    color: white;
+    transition: 
+    top 0.3s ease,
+    font-size 0.3s ease,
+    color 0.3s ease;
+}
+
+input:focus::placeholder
+{
+    color: transparent;
+}
+
+input::placeholder
+{
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+.custom-field-one
+{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom-field-one input
+{
+    border: none;
+    appearance: none;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+}
+
+.custom-field-one .placeholder-one
+{
+    position: absolute;
+    left: 14px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.custom-field-one input:valid + .placeholder-one,
+.custom-field-one input:focus + .placeholder-one
+{
+    top: 10px;
+    font-size: 10px;
+    color: white;
+    transition: 
+    top 0.3s ease,
+    font-size 0.3s ease,
+    color 0.3s ease;
+}
+
+.button
+{
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover
+{
+    background-color: grey;
+    transition-duration: 0.3s;
+}
