@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date countdown</title>
+    <link rel="stylesheet" href="countdown.css">
+    <script src="countdown.js" defer></script>
+</head>
+<body>
+    <label class="custom-field">
+        <input type="text"  id="mainTextInput" required/>
+        <span class ="placeholder">Countdown name</span>
+    </label>
+
+    <label class="custom-field-one">
+        <input type="text" id="dateInput" required>
+        <span class ="placeholder-one">MM DD YYYY</span>
+    </label>
+
+    <button class="button" onclick="change()" id="buttonCh">Change</button>
+    
+    <h1 class = "mainText" id="mainText">Countdown</h1>
+
+    <div class="countdown">
+        <div class="countdown-el days">
+            <p class="big-text", id="days">0</p>
+            <span>days</span>
+        </div>
+        <div class="countdown-el hours">
+            <p class="big-text", id="hours">0</p>
+            <span>hours</span>
+        </div>
+        <div class="countdown-el minutes">
+            <p class="big-text", id="minutes">0</p>
+            <span>minutes</span>
+        </div>
+        <div class="countdown-el seconds">
+            <p class="big-text", id="seconds">0</p>
+            <span>seconds</span>
+        </div>
+    </div>
+</body>
+</html>
