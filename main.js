@@ -3,12 +3,11 @@ const hoursEl = document.getElementById("hours")
 const minutesEl = document.getElementById("minutes")
 const secondsEl = document.getElementById("seconds")
 
-let dateI = "07 12 2030"
+let dateI = "07 12 2023"
 function countdown(){
     const useDate = new Date(`${dateI}`)
     const currentDate = new Date()
     const totalseconds = (useDate - currentDate) / 1000
-
     const days = Math.floor(totalseconds / 3600 / 24)
     const hours = Math.floor(totalseconds / 3600) % 24
     const minutes = Math.floor(totalseconds / 60) % 60
