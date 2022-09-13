@@ -3,9 +3,8 @@ const hoursEl = document.getElementById("hours")
 const minutesEl = document.getElementById("minutes")
 const secondsEl = document.getElementById("seconds")
 
-let dateI = "07 12 2022"
-function countdown()
-{
+let dateI = "07 12 2030"
+function countdown(){
     const useDate = new Date(`${dateI}`)
     const currentDate = new Date()
     const totalseconds = (useDate - currentDate) / 1000
@@ -20,26 +19,22 @@ function countdown()
     secondsEl.innerHTML = formatTime(seconds)
 }
 
-function formatTime(time)
-{
+function formatTime(time){
     return time < 10 ? `0${time}` : time;
 }
 
-function change()
-{
+function change(){
     changeDate()
     changeText()
 }
 
-function changeText()
-{
+function changeText(){
     const mainTextI = document.getElementById("mainTextInput")
     const mainText = document.getElementById("mainText")
     mainText.innerHTML = mainTextI.value
 }
 
-function changeDate()
-{
+function changeDate(){
     dateI = document.getElementById("dateInput").value
 }
 
