@@ -138,5 +138,6 @@ input::placeholder{
 
 .button:hover{
     background-color: grey;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
