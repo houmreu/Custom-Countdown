@@ -8,8 +8,12 @@ const mainText = document.getElementById("mainText");
 let td = Number(String(new Date().getDate()).padStart(2, '0'));
 let tm = Number(String(new Date().getMonth() + 1).padStart(2, '0'));
 let ty = new Date().getFullYear();
+let dateI;
 
-let dateI = (tm != 7 && tm < 12) ? `${7} ${12} ${ty}` : `${7} ${12} ${ty + 1}`;
+const getData = () => {
+    dateI = localStorage.getItem("dateData") != null ? localStorage.getItem("dateData") : (tm != 7 && tm < 12) ? `${7} ${12} ${ty}` : `${7} ${12} ${ty + 1}`;
+    mainText.innerHTML = localStorage.getItem("textData") != null ? localStorage.getItem("textData") : "Custom Countdown";
+}
 
 setInterval(() => {
     const totalseconds = (new Date(`${dateI}`) - new Date()) / 1000;
@@ -30,6 +34,14 @@ const formatTime = (time) => {
 }
 
 const change = () => {
-    dateI = document.getElementById("dateInput").value != "" ? document.getElementById("dateInput").value : dateI;
-    mainText.innerHTML = mainTextI.value != "" ? mainTextI.value : mainText.innerHTML;
+    if(document.getElementById("dateInput").value != ""){
+        dateI = document.getElementById("dateInput").value;
+        localStorage.setItem("dateData", document.getElementById("dateInput").value);
+    }
+    if(mainTextI.value != ""){
+        mainText.innerHTML = mainTextI.value;
+        localStorage.setItem("textData", mainTextI.value);
+    }
 }
+
+getData();
